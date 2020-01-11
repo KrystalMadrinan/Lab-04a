@@ -1,11 +1,18 @@
+/* MOBILE FIRST */
 body {
     width: 480px;
     height: 768px;
     margin: auto;
 }
 
-
-
+/* TABLET STUFF STARTS HERE */
+@media only screen and (min-width: 680px) { 
+    body {
+        width: 624px;
+        height: 768px;
+        margin: auto;
+    }
+  }
 
 /* DESKTOP STUFF STARTS HERE */
 @media only screen and (min-width: 768px) { 
