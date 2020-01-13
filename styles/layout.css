@@ -3,6 +3,7 @@ body {
     width: 480px;
     height: 768px;
     margin: auto;
+    display: grid;
 }
 
 /* TABLET STUFF STARTS HERE */
@@ -15,9 +16,9 @@ body {
   }
 
 /* DESKTOP STUFF STARTS HERE */
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 800px) { 
     body {
-        width: 960px;
+        width: 1024px;
         height: 768px;
         margin: auto;
     }

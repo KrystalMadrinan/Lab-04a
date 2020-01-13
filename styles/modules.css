@@ -1,4 +1,18 @@
 /* MOBILE FIRST */
+
+body {
+    /* display: grid;
+    grid-template-columns: 240px 240px;
+    grid-template-rows: [row1-start] 75px [row1-end] */
+    display: flex;
+    flex-direction: column;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+}
+
 #a {
     width: 480px;
     height: 75px;
@@ -7,6 +21,7 @@
     text-align: center;
     line-height: 75px;
     margin-top: 10px;
+
 }
 
 #b {
@@ -25,7 +40,8 @@
     background-color: rgb(190, 189, 189);
     text-align: center;
     line-height: 125px;
-    float: left;
+    /* flex-direction: row; */
+    /* float: left; */
 }
 
 #d {
@@ -35,7 +51,7 @@
     background-color: rgb(214, 214, 214);
     text-align: center;
     line-height: 125px;
-    float: right;
+    /* float: right; */
 }
 
 #e {
@@ -45,7 +61,7 @@
     background-color: rgb(99, 99, 99);
     text-align: center;
     line-height: 250px;
-    float: left;
+    /* float: left; */
 }
 
 #f {
@@ -55,7 +71,8 @@
     background-color: rgb(112, 112, 112);
     text-align: center;
     line-height: 250px;
-    float: right;
+
+    /* float: right; */
 }
 
 #g {
@@ -65,7 +82,7 @@
     background-color: rgb(92, 92, 92);
     text-align: center;
     line-height: 250px;
-    float: left;
+    /* float: left; */
     margin: 0px 0px 0px 0px;
 }
 
@@ -76,7 +93,7 @@
     background-color: rgb(194, 191, 191);
     text-align: center;
     line-height: 250px;
-    float: right;
+    /* float: right; */
 }
 
 footer {
@@ -86,12 +103,19 @@ footer {
     background-color: rgb(163, 162, 162);
     text-align: center;
     line-height: 80px;
-    clear: right;
+    /* clear: right; */
     margin-bottom: 10px;
 }
 
 /* TABLET STUFF STARTS HERE */
 @media only screen and (min-width: 680px) { 
+
+    body {
+        display: grid;
+        grid-template-columns: 240px 240px;
+        grid-template-rows: [row1-start] 75px [row1-end]
+    }
+
     #a, #b, #c, #d {
         width: 624px;
     }
@@ -185,13 +209,20 @@ footer {
 
 /* DESKTOP STUFF STARTS HERE */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 240px 240px;
+        grid-template-rows: [row1-start] 75px [row1-end]
+    }
+
     #a, #b, #c, #d, #e, #f, #g, #h, #i {
         border: 1px solid black;
         text-align: center;
     }
     #a {
-        width: 960px;
+        width: 1024px;
         height: 100px;
         line-height: 100px;
         background-color: maroon;
@@ -249,7 +280,7 @@ footer {
     }
 
     footer {
-        width: 760px;
+        width: 1024px;
         height: 150px;
         line-height: 80px;
         background-color: rgb(70, 0, 0);
