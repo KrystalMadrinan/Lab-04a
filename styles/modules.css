@@ -1,14 +1,16 @@
 /* MOBILE FIRST */
 
 body {
-    /* display: grid;
-    grid-template-columns: 240px 240px;
-    grid-template-rows: [row1-start] 75px [row1-end] */
     display: flex;
     flex-direction: column;
 }
 
 .boxes {
+    display: flex;
+    flex-direction: row;
+}
+
+.boxes2 {
     display: flex;
     flex-direction: row;
 }
@@ -40,8 +42,6 @@ body {
     background-color: rgb(190, 189, 189);
     text-align: center;
     line-height: 125px;
-    /* flex-direction: row; */
-    /* float: left; */
 }
 
 #d {
@@ -51,7 +51,6 @@ body {
     background-color: rgb(214, 214, 214);
     text-align: center;
     line-height: 125px;
-    /* float: right; */
 }
 
 #e {
@@ -61,7 +60,6 @@ body {
     background-color: rgb(99, 99, 99);
     text-align: center;
     line-height: 250px;
-    /* float: left; */
 }
 
 #f {
@@ -71,8 +69,6 @@ body {
     background-color: rgb(112, 112, 112);
     text-align: center;
     line-height: 250px;
-
-    /* float: right; */
 }
 
 #g {
@@ -82,7 +78,6 @@ body {
     background-color: rgb(92, 92, 92);
     text-align: center;
     line-height: 250px;
-    /* float: left; */
     margin: 0px 0px 0px 0px;
 }
 
@@ -93,7 +88,6 @@ body {
     background-color: rgb(194, 191, 191);
     text-align: center;
     line-height: 250px;
-    /* float: right; */
 }
 
 footer {
@@ -103,7 +97,6 @@ footer {
     background-color: rgb(163, 162, 162);
     text-align: center;
     line-height: 80px;
-    /* clear: right; */
     margin-bottom: 10px;
 }
 
@@ -112,8 +105,8 @@ footer {
 
     body {
         display: grid;
-        grid-template-columns: 240px 240px;
-        grid-template-rows: [row1-start] 75px [row1-end]
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 75px 150px 125px 125px 250px 250px 80px
     }
 
     #a, #b, #c, #d {
@@ -127,6 +120,8 @@ footer {
         text-align: center;
         line-height: 75px;
         margin-top: 10px;
+        grid-column-start: 1;
+        grid-row-start: 1;
     }
     
     #b {
@@ -135,6 +130,8 @@ footer {
         background-color: rgb(17, 134, 66);
         text-align: center;
         line-height: 150px;
+        grid-column-start: 1;
+        grid-row-start: 2;
     }
     
     #c {
@@ -143,7 +140,8 @@ footer {
         background-color: rgb(4, 56, 15);
         text-align: center;
         line-height: 125px;
-        float: left;
+        grid-column-start: 1;
+        grid-row-start: 3;
     }
     
     #d {
@@ -152,20 +150,33 @@ footer {
         background-color: rgb(14, 110, 54);
         text-align: center;
         line-height: 125px;
-        float: right;
+        grid-column-start: 1;
+        grid-row-start: 4;
     }
 
     #e, #f, #g, #h {
         width: 312px;
     }
     
+    .boxes {
+        grid-column-start: 1;
+        grid-row-start: 5;
+        grid-column-end: span 2;
+    }
+
+    .boxes2 {
+        grid-column-start: 1;
+        /* grid-column-end: span 2; */
+        grid-row-start: 6;
+    }
     #e {
         height: 250px;
         border: 1px solid black;
         background-color: rgb(15, 88, 38);
         text-align: center;
         line-height: 250px;
-        float: left;
+        grid-column-start: 1;
+        
     }
     
     #f {
@@ -182,8 +193,8 @@ footer {
         background-color: rgb(4, 114, 32);
         text-align: center;
         line-height: 250px;
-        float: left;
         margin: 0px 0px 0px 0px;
+        grid-column-start: 1;
     }
     
     #h {
@@ -192,7 +203,6 @@ footer {
         background-color: rgb(12, 90, 32);
         text-align: center;
         line-height: 250px;
-        float: right;
     }
     
     footer {
@@ -202,8 +212,11 @@ footer {
         background-color: rgb(11, 68, 11);
         text-align: center;
         line-height: 80px;
-        clear: right;
         margin-bottom: 10px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: span 4;
     }
   }
 
@@ -213,8 +226,8 @@ footer {
 
     body {
         display: grid;
-        grid-template-columns: 240px 240px;
-        grid-template-rows: [row1-start] 75px [row1-end]
+        grid-template-columns: 200px 380px 380px;
+        grid-template-rows: 110px 200px 250px 150px;
     }
 
     #a, #b, #c, #d, #e, #f, #g, #h, #i {
@@ -222,69 +235,84 @@ footer {
         text-align: center;
     }
     #a {
-        width: 1024px;
+        width: 960px;
         height: 100px;
         line-height: 100px;
         background-color: maroon;
         margin-top: 10px;
+        grid-column-start: 1;
+        grid-row-start: 1;
     }
     #b {
         width: 200px;
         height: 600px;
         line-height: 600px;
         background-color: rgb(104, 0, 0);
-        float: left;
+        grid-column-start: 1;
     }
     #c {
         width: 380px;
         height: 200px;
         line-height: 200px;
         background-color: rgb(150, 0, 0);
-        float: left;
+        grid-column-start: 2;
+        grid-row-start: 2;
     }
     #d {
         width: 380px;
         height: 200px;
         line-height: 200px;
         background-color: rgb(90, 0, 0);
-        float: right;
+        grid-column-start: 3;
+        grid-row-start: 2;
+    }
+
+    .boxes {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+
+    .boxes2 {
+        grid-column-start: 3;
+        grid-row-start: 3;
     }
     #e {
         width: 190px;
         height: 250px;
         line-height: 250px;
         background-color: rgb(82, 1, 1);
-        float: left;
+        /* grid-column-start: 2;
+        grid-row-start: 3; */
     }
     #f {
         width: 190px;
         height: 250px;
         line-height: 250px;
         background-color: rgb(112, 13, 13);
-        float: left;
+        grid-column-start: 3;
     }
     #g {
         width: 190px;
         height: 250px;
         line-height: 250px;
         background-color: rgb(126, 34, 34);
-        float: left;
         margin: 0px 0px 0px 0px;
+        grid-column-start: 4;
     }
     #h {
         width: 190px;
         height: 250px;
         line-height: 250px;
         background-color: rgb(160, 12, 12);
-        float: right;
+        grid-column-start: 5;
     }
 
     footer {
-        width: 1024px;
+        width: 960px;
         height: 150px;
         line-height: 80px;
         background-color: rgb(70, 0, 0);
-        float: right;
+        grid-row-start: 4;
     }
 
 }
